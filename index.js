@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs')
 const app = express();
+const port = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const routes = require('./src/routes/main')
 const Detail = require('./src/models/detail')
@@ -98,7 +99,7 @@ mongoose.connect("mongodb+srv://satendra_gangwar:Sattu4455@cluster0.yhjet.mongod
     
     // })
 })
-app.listen(process.env.PORT | 80,()=>{
+app.listen(port,()=>{
     console.log("connected")
 })
 
